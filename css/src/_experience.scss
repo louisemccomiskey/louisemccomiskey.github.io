@@ -1,0 +1,246 @@
+/******************************
+* EXPERIENCE SECTION
+*******************************/
+
+.experience {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    @extend .gbl-side-gutter;
+    
+    .primary-title {
+        display: inline-block;
+        align-self: center;
+    }   
+}
+
+.md-experience {
+    padding-top: 4rem;
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &:first-of-type {
+        padding-top:0;
+    }
+}
+
+.md-experience--inner {
+    max-width: 55rem;
+     width: 100%;
+    
+    @include bp(s-m) {
+        width: 55rem;
+    }
+}
+
+
+/********************
+* SKILLSET STYLES
+*********************/
+.skillset {
+    position: relative;
+}
+
+.skillset_item {
+    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%;
+}
+
+.skillset_list {
+    list-style-type: none;
+    width: 100%;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.skill_text {
+    display: block;
+    line-height: 2.2rem;
+}
+
+.skill_marker {
+    flex: 0 0 5.4rem;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    margin-right: 1.5rem;
+}
+
+.skill_marker--item {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 0;
+    background-color: map-get( $theme, skillMarkerDefault );
+
+    &.check {
+        background-color: map-get( $theme, skillMarkerHighlighted );
+    }
+}
+
+
+/********************
+* TOOLSET STYLES
+*********************/
+
+.toolset {
+
+	.toolset_list {
+        width: 100%;
+    	list-style-type: none;
+        padding-left: 2.1rem;
+        
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        
+        @include bp(s-m){
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;   
+            margin-top: 0;
+            padding-left: 1rem;
+        }  
+	}
+
+	.toolset_list--item {
+        padding: 0.3rem;
+        position: relative;
+        
+        $bulletSizeSmall: 0.5rem;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            left: -1rem;
+            width: $bulletSizeSmall;
+            height: $bulletSizeSmall;
+            background: map-get($theme, 'skillsBullet');
+            transform: rotate(45deg);
+            top: calc(50% - (#{$bulletSizeSmall} /2) );
+            margin-top: -0.1rem;
+        }
+        
+        @include bp(s-m){
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            
+            &:first-child {
+                padding-left: 0;
+                
+                &:before {
+                    display: none;
+                }
+            }
+        } 
+	}
+}
+
+/********************
+* AWARDS STYLES
+*********************/
+.awards {
+    width: 100%;
+    margin: 0 auto;
+    
+    .awards_list {
+        padding-left: 1rem;
+        
+        @include bp(s-m){
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+	.awards_list--item {
+        
+        &:last-child {
+		  margin-top: 2.5rem;
+        }
+        
+        @include bp(s-m){
+            &:first-child {
+                margin-right: 2rem;
+                flex: 2;
+            }
+
+            &:last-child {
+                flex: 1.5;
+                margin-top: 0;
+            }
+        }
+        
+        .link {
+            margin-top: 0.2rem;
+            display: block;
+            pointer-events:all;
+
+            .awards_list--project {
+                margin:0;
+                transition: color 0.3s $curvePrimary;
+                color: map-get($theme, 'awardsLinkColor');
+                line-height: 2rem;
+            }
+
+            &:hover,
+            &:focus {
+                outline: 0;
+                
+                .awards_list--project {
+                    color: map-get($theme, 'awardsLinkHighlightColor');
+                }
+            }
+            
+
+        }
+	}
+    
+    .awards_list--title {
+        color: map-get($theme, 'awardsTitleColor');
+    }
+    
+    .awards_list--date {
+        font-size: 1.3rem;
+    }
+    
+    .award-img {
+        width:7rem;
+    }
+}
+
+
+
+/********************
+* PRESENTATION STYLES
+*********************/
+.presentations {
+    
+    .presentations_list {
+        padding-left: 1rem;
+    }
+    
+	.presentations_list--item {
+		margin-bottom: 1rem;
+		display: flex;
+    	flex-direction: row;
+	}
+	.presentations_list--date {
+		color: map-get($theme, 'presentationsDateColor');
+    	margin-right: 0.9rem;
+        flex-shrink: 0;
+	}
+}

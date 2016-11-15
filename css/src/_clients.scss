@@ -1,0 +1,71 @@
+.clients {
+    position: relative;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    background-color:map-get($theme, clientsBg);
+    
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+    .primary-title {
+        margin-bottom: 3rem;
+    }
+
+    .clients_list {
+		display: flex;
+   		flex-direction: row;
+    	width: 100%;
+    	flex-wrap: wrap;
+	    margin: 0 auto;
+	    align-items: center;
+        justify-content: center;
+        
+        max-width: 38rem;
+
+        @include bp(m) {
+	       max-width: 80rem;
+        }
+
+	    .clients_list--item {
+	    	flex:1 1 25%;
+	    	min-width: 60px;
+            margin-bottom: 20px;
+            
+            @include bp(m){
+                max-width:8.5rem;
+                flex: 1;
+                margin-bottom: 0;
+            }
+            
+            .inner {
+                margin-right: 18.5%;
+                margin-left: 18.5%;
+                
+                @include bp(m){
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+            }
+	    }
+        
+	    .social_list--icon,
+        svg {
+	    	fill: map-get($theme, 'clientFillColor');
+            width: 100%;
+            height: auto;
+	    }
+
+	    .client-list--text {
+		    text-indent: 100%;
+		    overflow:hidden;
+		    display: block;
+		    width:0;
+		    height:0;
+	    }
+    }
+}

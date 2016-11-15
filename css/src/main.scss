@@ -1,0 +1,22 @@
+/* Import Libraries */
+@import "../libs/normalize.scss";
+@import "../libs/flickity.scss";
+
+/* Import helpers */
+@import "./helpers/variables";
+@import "./helpers/mixins";
+
+/* Import Partials */
+@import "global";
+@import "typography";
+
+/* Import Element Components */
+@import "sociallist";
+
+/* Import Layout Components */
+@import "header";
+@import "footer";
+
+@import "clients";
+@import "projects";
+@import "experience";

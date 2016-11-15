@@ -1,0 +1,43 @@
+
+        <li class="social-ist--item">
+            <a class="social-list--link" href="https://www.linkedin.com/in/louisemccomiskey" aria-label="View my Linkedin profile" target="_blank">
+
+                {% include "partials/svg/icon-linkedin.html" %}
+                <span class="social-list--text">Linkedin</span>
+            </a>
+        </li>
+        <li class="social-list--item">
+            <a class="social-list--link" href="https://codepen.io/louise_mcc88/" aria-label="View my Codepen profile" target="_blank">
+
+                {% include "partials/svg/icon-codepen.html" %}
+                <span class="social-list--text">Codepen</span>
+            </a>
+        </li>
+        <li class="social-list--item">
+            <a class="social-list--link" href="https://github.com/louisemccomiskey" aria-label="View my Github profile" target="_blank">
+                
+                {% include "partials/svg/icon-github.html" %}
+                <span class="social_list--text">Github</span>
+            </a>
+        </li>
+        <li class="social-list--item">
+            <a class="social-list--link stackoverflow" href="https://stackoverflow.com/users/728071/louise-mccomiskey" aria-label="View my Stack Overflow profile" target="_blank">
+
+                {% include "partials/svg/icon-stackoverflow.html" %}
+                <span class="social-list--text">Stack Overflow</span>
+            </a>
+        </li>
+        <li class="social-list--item">
+            <a class="social-list--link" href="https://twitter.com/louise_mcc" aria-label="View my Twitter profile" target="_blank">
+
+                {% include "partials/svg/icon-twitter.html" %}	
+                <span class="social-list--text">Twitter</span>
+            </a>
+        </li>
+        <li class="social-ist--item">
+            <a class="social-list--link" href="https://www.instagram.com/louisemcc88/" aria-label="View my Instagram profile" target="_blank">
+
+                {% include "partials/svg/icon-instagram.html" %}		
+                <span class="social-list--text">Instagram</span>
+            </a>
+        </li>

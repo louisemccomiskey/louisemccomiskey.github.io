@@ -1,0 +1,382 @@
+/* Base Style Overrides */
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+	padding:0;
+	margin:0;
+    background: map-get($theme, 'baseBg');
+    position: relative;
+}
+
+a,
+button {
+	cursor:pointer;
+    text-decoration: none;
+}
+ 
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+hr {
+	max-width: 550px;
+    border: 0;
+    height: 1px;
+    background: rgba(black, 0.25);
+    width: 100%;
+    margin: 0;
+}
+
+.btn-primary {
+    border: none;
+    padding: 16px 30px;
+    font-size: 15px;
+    min-width: 87px; 
+    cursor: pointer;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    transition: all 0.3s $curvePrimary;
+    
+    background: map-get($theme, 'btnPrimaryBg');
+    color: map-get($theme, 'btnPrimaryColor');
+    
+    &:focus {
+        outline: 0;
+    }
+    
+    &:focus,
+    &:hover {
+        background: map-get($theme, 'btnPrimaryBgHover');
+        color: map-get($theme, 'btnPrimaryColorHover');
+    }
+    
+    &.is--inverse {
+        background-color: map-get($theme, 'btnPrimaryBgInverse');
+        color: map-get($theme, 'btnPrimaryColorInverse');
+        
+        &:focus {
+            outline: 0;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: map-get($theme, 'btnPrimaryBgHoverInverse');
+            color: map-get($theme, 'btnPrimaryColorHoverInverse');
+        }
+    }
+    
+    &.is--footer-btn {
+        background-color: map-get($theme, 'btnPrimaryBgFooter');
+        color: map-get($theme, 'btnPrimaryColorFooter');
+        
+        &:focus {
+            outline: 0;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: map-get($theme, 'btnPrimaryBgHoverFooter');
+            color: map-get($theme, 'btnPrimaryColorHoverFooter');
+        }
+    }
+    
+    &.is--header-btn {
+        background-color: map-get($theme, 'btnPrimaryBgHeader');
+        color: map-get($theme, 'btnPrimaryColorHeader');
+        
+        &:focus {
+            outline: 0;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: map-get($theme, 'btnPrimaryBgHoverHeader');
+            color: map-get($theme, 'btnPrimaryColorHoverHeader');
+        }
+    }
+}
+
+
+
+
+.btn-icon,
+.flickity-prev-next-button {
+    border: none;
+    background: none;
+    padding:0;
+    border-radius: 0;
+    box-sizing: content-box;
+    
+    width: map-get($btnIconSizeMap, 'default');
+    height: map-get($btnIconSizeMap, 'default');
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(.25,.8,.25,1);
+    transform-origin: inherit;
+    
+    &.icon-arrow {
+        
+        .button-bg {
+            transition: fill 0.3s cubic-bezier(.25,.8,.25,1);
+            fill: map-get($theme, 'btnIconBg');
+        }
+        
+        .button-arrow {
+            transition: fill 0.3s cubic-bezier(.25,.8,.25,1);
+            fill: map-get($theme, 'btnIconArrow');
+        }
+        
+        &:hover,
+        &:focus {
+            transform: scale(1.1);
+            
+            .button-bg {
+                fill: map-get($theme, 'btnIconBgHover');
+            }
+
+            .button-arrow {
+                fill: map-get($theme, 'btnIconArrowHover');
+            }
+        }
+    }
+    
+    &.is-inverse.icon-arrow {
+        .button-bg {
+            fill: map-get($theme, 'btnIconBgInverse');
+        }
+        
+        .button-arrow {
+            fill: map-get($theme, 'btnIconArrowInverse');
+        }
+        
+        &:hover,
+        &:focus {
+            .button-bg {
+                fill: map-get($theme, 'btnIconBgHoverInverse');
+            }
+
+            .button-arrow {
+                fill: map-get($theme, 'btnIconArrowHoverInverse');
+            }
+        }        
+    }
+}
+
+.project.is--inverse {
+    .icon-arrow {
+
+        .button-bg {
+            fill: map-get($theme, 'btnIconBg');
+        }
+
+        .button-arrow {
+            fill: map-get($theme, 'btnIconArrow');
+        }
+
+        &:hover,
+        &:focus {
+
+            .button-bg {
+                fill: map-get($theme, 'btnIconBgHover');
+            }
+
+            .button-arrow {
+                fill: map-get($theme, 'btnIconArrowHover');
+            }
+        }
+    } 
+}
+
+.pg-header {
+    .icon-arrow {
+
+        .button-bg {
+            fill: map-get($theme, 'btnIconBg');
+        }
+
+        .button-arrow {
+            fill: map-get($theme, 'btnIconArrow');
+        }
+
+        &:hover,
+        &:focus {
+
+            .button-bg {
+                fill: map-get($theme, 'btnIconBgHoverHeader');
+            }
+
+            .button-arrow {
+                fill: map-get($theme, 'btnIconArrowHoverHeader');
+            }
+        }
+    } 
+}
+
+.flickity-prev-next-button {
+    display: none;
+    visibility: hidden;
+    transform: none;
+    width: map-get($btnIconSizeMap, 'carousel');
+    height: map-get($btnIconSizeMap, 'carousel');
+    
+    $topP: map-get($btnIconSizeMap, 'carousel') /2;
+    $horizP: -(map-get($btnIconSizeMap, 'carousel') /2) - 1;
+    
+    top: calc(50% - #{$topP});
+    
+    &.is--visible {
+        display: block;
+    }
+    
+    &.previous {
+        left:$horizP;
+    }
+    
+    &.next {
+        right:$horizP;
+    }
+    
+    @include bp(m) {
+        visibility: visible;
+    }
+    
+    svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &:hover,
+    &:focus {
+        box-shadow: none;
+        background: none;
+    }
+}
+
+.btn-back-to-top {
+    margin-top: 22px;
+
+    
+      svg {
+        margin-top: -1px;
+    }
+}
+
+.btn-scroll-down {
+    margin-top: 2rem;
+    
+      svg {
+        margin-top: 1px;
+    }
+}
+
+.hyperlink {
+    color: map-get($theme, hyperlinkColor);
+    display: inline;
+    transition: color 0.3s $curvePrimary;
+    position: relative;
+    
+    &:before {
+        content: '';
+        position: absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        transition: background-color 0.3s $curvePrimary;
+        background-color: map-get($theme, hyperlinkColor);
+        width: 100%;
+        height: 0.2rem;
+    }
+    
+    &:hover,
+    &:focus {
+        color: map-get($theme, hyperlinkColorHover);
+        
+        &:before {
+            background-color: map-get($theme, hyperlinkColorHover);
+        }
+    }
+}
+
+/* Base Layouts */
+
+.gutter {
+	padding-left: 4rem; 
+	padding-right: 4rem;
+	box-sizing: border-box;
+}
+
+.max {
+	max-width: 80rem;
+    margin: 0 auto;
+}
+
+.vert-gutter {
+	padding-top: 4rem; 
+	padding-bottom: 4rem;
+}
+
+.flex-ctn {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+.gbl-side-gutter {
+    padding-left: map-get($sideGutterMmap, s);
+    padding-right: map-get($sideGutterMmap, s);
+
+    @include bp('m') {
+        padding-left: map-get($sideGutterMmap, m);
+        padding-right: map-get($sideGutterMmap, m);
+    }
+}
+
+
+
+//.sec-border {
+//    position:relative;
+//    
+//    &:after {
+//        content: '';
+//        position: absolute;
+//        width: 100%;
+//        height: 100px;
+//        left:0;
+//        right:0;
+//        bottom: -50px;
+//        background: inherit;
+//        z-index: -1;
+//        transform: skewY(-3deg);
+//    }
+//}
+//
+//.sec-1 {
+//    z-index: 100;
+//}
+//
+//.sec-2 {
+//    z-index: 90;
+//}
+//
+//.sec-3 {
+//    z-index: 80;
+//}
+//
+//.sec-4 {
+//    z-index: 70;
+//}
+//
+//.sec-5 {
+//    z-index: 60;
+//}
+

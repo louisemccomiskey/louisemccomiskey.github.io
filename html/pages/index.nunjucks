@@ -1,0 +1,411 @@
+{% extends "base.nunjucks" %}
+
+{% block content %} 
+
+<section data-anchor="pagetop" class="pg-home js-pg-home js-block-elem">
+
+    <header class="pg-header">
+        <div class="header_pattern"></div>
+        <div class="header_elements">
+            <h1 class="header_title js-header-title"><span class="hello">Hello,&nbsp;</span>I'm Louise,</h1>
+            <h2 class="header_subtitle">A Front-end Web Developer.</h2>
+
+            <p class="header_desc">I have over 5 years experience creating digital products for global brands. I love to build semantic, responsive, mobile first websites and applications with user experience in mind. I am currently available for freelance work so if you'd like to know more please&nbsp;<a href="mailto:mlmccomiskey@gmail.com" class="hyperlink">get in touch</a></p>
+
+            <nav class="nav__social-list">
+                <ul class="social-list header__social-list">
+                    {% include "partials/sociallist.nunjucks" %}
+                </ul>
+            </nav>
+
+            <a href="#clients" class="btn-icon icon-arrow icon-arrow-down btn-scroll-down js-btn-scrolldown">{% include "partials/svg/arrow-down.html" %}</a>
+        </div>
+    </header>
+
+    <section data-anchor="clients" class="clients js-clients js-block-elem">
+        <h2 class="clients--title">Clients I&nbsp;'ve worked with:</h2>
+        <ul class="clients_list">
+            <li class="clients_list--item">
+                <div class="inner">
+                    {% include "partials/svg/logo-facebook.html" %}
+                    <span class="client-list--text">Facebook</span>
+                </div>
+            </li>
+
+            <li class="clients_list--item">
+                <div class="inner">
+                    {% include "partials/svg/logo-google.html" %}
+                    <span class="client-list--text">Google</span>
+                </div>
+            </li>
+
+<!--
+            <li class="clients_list--item">
+                <div class="inner">
+                    {% include "partials/svg/logo-cocacola.html" %}
+                    <span class="client-list--text">Coca Cola</span>
+                </div>
+            </li>
+-->
+
+            <li class="clients_list--item">
+                <div class="inner">
+                    {% include "partials/svg/logo-youtube.html" %}
+                    <span class="client-list--text">Youtube</span>
+                </div>
+            </li>
+
+
+            <li class="clients_list--item">
+                <div class="inner">
+                    {% include "partials/svg/logo-disney.html" %}
+                    <span class="client-list--text">Disney</span>
+                </div>
+            </li>
+
+
+            <li class="clients_list--item">
+                <div class="inner">
+                    {% include "partials/svg/logo-gillette.html" %}
+                    <span class="client-list--text">Gillette</span>
+                </div>
+            </li>
+
+            <li class="clients_list--item">
+                <div class="inner">
+                    {% include "partials/svg/logo-redbull.html" %}
+                    <span class="client-list--text">Redbull</span>
+                </div>
+            </li>
+
+            <li class="clients_list--item">
+                <div class="inner">
+                    {% include "partials/svg/logo-samsung.html" %}
+                    <span class="client-list--text">Samsung</span>
+                </div>
+            </li>
+
+            <li class="clients_list--item">
+                <div class="inner">
+                    {% include "partials/svg/logo-asics.html" %}
+                    <span class="client-list--text">Asics</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section data-anchor="projects" class="projects js-projects js-block-elem js-nav-section">
+        
+        <header class="title_primary--ctn">
+            <h1 class="projects--title title_primary">Projects</h1>
+            <h2 class="title_primary--subtitle">A Selection of sites I&nbsp;'ve helped to create.</h2>
+            <div class="title_primary--icon icon-heart">{% include "partials/svg/icon-heart.html" %}</div>
+        </header>
+    
+        <section class="project project-disney sec-border sec-border-lower sec-1">
+            <div class="project--inner">
+                <header class="project_header">
+                    <span class="project--number">#1</span>
+                    <div class="project--logo-ctn">
+                        {% include "partials/svg/logo-disney.html" %}
+                    </div>
+
+                    <h2 class="project--title">Blank Dedicate a Frame.</h2>
+                    <h3 class="project--subtext">My role: Front-end Developer</h3>
+                </header>
+                <div class="project_row_video">
+                    <div class="project_video--inner">
+                        <iframe src="https://player.vimeo.com/video/126119080?title=0&amp;byline=0&amp;portrait=0" width="939" height="527" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+                <div class="project_row_desc">
+
+                    <div class="project_info--ctn">
+                        <p class="project-intro">A digital experience for Valentine’s day to celebrate the launch of Disney’s new short film, Blank, on Google Play.</p>
+
+                        <p>The site allowed users to select a still from the film and dedicate it to someone special for Valentine's day. Each recipient recieved a personalised video featuring the characters from the film. 5000 printed cards were created in the first 24 hours, and over 95,000 digital cards were sent out during the campaign.</p>
+
+                        <p>As part of the front end development team my role was to make the site responsive and create the animations.</p>
+
+                        <p>The project was featured on the Google.com homepage, Blank became the most downloaded movie on Google Play and the site won FWA mobile site of the day.</p>
+                    </div>
+
+                    <div class="btn-wrapper">
+                        <a class="btn btn-primary project--link" href="https://www.rehabstudio.com/work/blank-dedicate-a-frame/" target="_blank">Find out more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="project project-google sec-border sec-border-lower sec-2">
+            <div class="project--inner">
+                <header class="project_header">
+                    <span class="project--number">#2</span>
+                    <div class="project--logo-ctn">
+                        {% include "partials/svg/logo-google.html" %}
+                    </div>
+                    <h2 class="project--title">The Digital Garage</h2>
+                    <h3 class="project--subtext">My role: Lead Front-end Developer</h3>
+
+                </header>
+                <div class="project_row_slider">
+                    <div class="project_slider-ctn">
+                        <ul class="project_slider js-project_slider">
+                            <li class="project_slider--item">
+                                <img class="project--image" src="img/project-digitalgarage-1.jpg" />
+                            </li>
+                             <li class="project_slider--item">
+                                 <img class="project--image" src="img/project-digitalgarage-2.jpg" />
+                            </li>
+                             <li class="project_slider--item">
+                                 <img class="project--image" src="img/project-digitalgarage-3.jpg" />
+                            </li>
+                            <li class="project_slider--item">
+                                 <img class="project--image" src="img/project-digitalgarage-4.jpg" />
+                            </li>
+                            <li class="project_slider--item">
+                                 <img class="project--image" src="img/project-digitalgarage-5.jpg" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project_row_desc">
+    
+                    <div class="project_info--ctn">
+
+                        <p class="project-intro">An online learning platform created by Google to help improve the digital skills of small to medium sized businesses.</p>
+
+                        <p>It offers free tutorials on topics of the user's choice or plans that are specifically tailored to the each business's needs. On completion of the online course user's gain a certification from Google and IAB Europe. </p>
+
+                        <p>I worked as Lead frontend developer on this project for six months and our team implemented a new set of interactive quizzes to accompany the current teaching materials.</p>
+
+                        <p>It was a great opportunity to enhance my knowledge of Angular JS, Material Design guidelines and Accessibility standards.</p>
+
+                        <p>The website has currently launched in 27 European markets and is available in 23 languages to date. So far over 1 million users have created an account and over 6 million lessons have been completed.</p>
+
+                    </div>
+
+                    <div class="btn-wrapper">
+                        <a class="btn btn-primary project--link is--inverse" href="https://www.rehabstudio.com/work/digital-garage/" target="_blank">Find out more</a>
+
+                        <a class="btn btn-primary is--inverse project--link btn-highlighted" href="https://digitalgarage.withgoogle.com/" target="_blank">View Site</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project project-rehabstudio sec-border sec-border-lower sec-3 is--inverse">
+            <div class="project--inner">
+                <header class="project_header">
+                    <span class="project--number">#3</span>
+                    <h2 class="project--title">+rehabstudio</h2>
+                    <h3 class="project--subtext">My role: Lead Front-end Developer</h3>
+                </header>
+                <div class="project_row_slider">
+                    <div class="project_slider-ctn">
+                        <ul class="project_slider js-project_slider">
+                            <li class="project_slider--item">
+                                <img class="project--image" src="img/project-rehabstudio-1.jpg" />
+                            </li>
+                             <li class="project_slider--item">
+                                 <img class="project--image" src="img/project-rehabstudio-2.jpg" />
+                            </li>
+                             <li class="project_slider--item">
+                                 <img class="project--image" src="img/project-rehabstudio-3.jpg" />
+                            </li>
+                            <li class="project_slider--item">
+                                 <img class="project--image" src="img/project-rehabstudio-4.jpg" />
+                            </li>
+                            <li class="project_slider--item">
+                                 <img class="project--image" src="img/project-rehabstudio-5.jpg" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project_row_desc">
+                    
+                    <div class="project_info--ctn">
+                        <p class="project-intro">A new build of +rehabstudio's website following their rebrand in 2014.</p>
+
+                        <p>Leading the Front-end Development team it was my role to implement the projects core architecture, write technical and functional specifications, plan sprint deliverables and delegate tasks to the team. It also allowed me to be more involved with the UX and creative teams in the earlier stages of planning and protoyping to provide a technical insight.</p>
+                            
+                        <p> One key focus was enhancing performance, to achieve this we took the time to properly research, analyse and implement different optimization techniques such as the critical rendering path and reducing site load times.</p>
+                            
+                        <p>This meant we were able to deliver a web application that not only reflected the new branding and showcased the agencies work elegantly but also was fully responsive and highly performant on across all devices.</p>      
+                    </div>
+
+                    <div class="btn-wrapper">
+                      <a class="btn btn-primary project--link" href="https://www.rehabstudio.com/" target="_blank">View Site</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section data-anchor="experience" class="experience js-experience js-block-elem js-nav-section">
+        
+        <header class="title_primary--ctn">
+            <h1 class="projects--title title_primary">Experience</h1>
+            <h2 class="title_primary--subtitle">My knowledge so far.</h2>
+            <div class="title_primary--icon icon-code">{% include "partials/svg/icon-code.html" %}</div>
+        </header>
+
+        <section class="md-experience skillset">
+            <div class="md-experience--inner">
+
+                <h2 class="title--secondary">Current Skillset</h2>
+                <ul class="skillset_list">
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(3)}}
+                        <span class="skill_text">Semantic HTML5 using BEM/SMACSS</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(3)}}
+                        <span class="skill_text">CSS3 using SASS.</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(3)}}
+                        <span class="skill_text">Backbone.js/AngularJS JavaScript Frameworks.</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(3)}}
+                        <span class="skill_text">Client/server-side templating systems.</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(3)}}
+                        <span class="skill_text">Cross-browser/cross-device testing &amp; debugging.</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(3)}}
+                        <span class="skill_text">Website Performance &amp; Optimization.</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(3)}}
+                        <span class="skill_text">Progressive Enhancement / Graceful Degradation.</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(3)}}
+                        <span class="skill_text">Adobe Photoshop/Illustrator &amp; Sketch.</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(2)}}
+                        <span class="skill_text">GIT version control system.</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(2)}}
+                        <span class="skill_text">Task runners such as GULP.</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(2)}}
+                        <span class="skill_text">Module Bundlers such as Webpack.</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(2)}}
+                        <span class="skill_text">Coding with Accessibility in mind.</span>
+                    </li>
+
+                    <li class="skillset_item">
+                        {% import 'macros/macroskillsetmarker.nunjucks' as marker %}
+                        {{marker.skillsetCount(1)}}
+                        <span class="skill_text">Unit testing using Mocha, Chai &amp; Sinon, with Karma.</span>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="md-experience toolset">
+            <div class="md-experience--inner">
+                <h2 class="title--secondary">Current Toolset</h2>
+                <ul class="toolset_list">
+                    <li class="toolset_list--item">Brackets editor</li>
+                    <li class="toolset_list--item">Terminal</li>
+                    <li class="toolset_list--item">Git</li>
+                    <li class="toolset_list--item">SASS</li>
+                    <li class="toolset_list--item">Gulp</li>
+                    <li class="toolset_list--item">Webpack</li>
+                    <li class="toolset_list--item">Sketch</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="md-experience awards">
+            <div class="md-experience--inner">
+                <h2 class="title--secondary">Awards</h2>
+                <ul class="awards_list">
+                    <li class="awards_list--item">
+                        <span class="awards_list--date">03rd March 2014</span>
+                        <a class="link" href="https://play.google.com/store/movies/details?id=FitJ3hgxiAg" target="_blank">
+                            <div class="award-img">
+                                {% include "partials/svg/logo-fwa.html" %}
+                            </div>
+                            <h3 class="awards_list--title" >Mobile Site of the day.</h3>
+                            <p class="awards_list--project">Disney's BLANK - Dedicate a frame</p>
+                        </a>
+                    </li>
+                    <li class="awards_list--item">
+                        <span class="awards_list--date">17th May 2012</span>
+                        <a class="link" href="https://thefwa.com/cases/the-switch?p=rehabstudio" target="_blank">
+                            <div class="award-img">
+                                {% include "partials/svg/logo-fwa.html" %}
+                            </div>
+
+                            <h3 class="awards_list--title">Site of the day.</h3>
+                            <p class="awards_list--project">The Switch Choose your energy with 5Gum</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="md-experience presentations">
+            <div class="md-experience--inner">
+                <h2 class="title--secondary">Presentions</h2>
+                <ul class="presentations_list">
+                    <li class="presentations_list--item">
+                            <span class="presentations_list--date">2015 &#45; </span>
+                            Spoke to a class at St Dominic's Grammar School, Belfast.
+                    </li>
+                   
+                    <li class="presentations_list--item">
+                            <span class="presentations_list--date">2014 &#45; </span>
+                            Gave a presentation at University of Ulster's Careers Fair.
+                    </li>
+                    
+                     <li class="presentations_list--item">
+                            <span class="presentations_list--date">2013 &#45; </span>
+                            Spoke at bringitonni.info's Women in IT event to encourage young women to study programming.
+                    </li>
+                    
+                </ul>
+            </div>
+        </section>
+
+    </section>
+
+</section>
+{% endblock %}

@@ -1,0 +1,186 @@
+$primary-font: 'Catamaran', sans-serif;
+$secondary-font: 'Crimson Text', serif;
+
+.primary-font-bold {
+    font-family: $primary-font;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.primary-font-medium {
+    font-family: $primary-font;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.primary-font-reg {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.secondary-font {
+    font-family: $secondary-font;
+    font-style: italic;
+    font-weight: 400;
+}
+
+html { 
+    font-size: 62.5%; 
+    line-height: 1;
+}
+
+body {
+    font-size: 1.6rem;
+	line-height: 1;
+    @extend .primary-font-reg;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    
+    color: map-get($theme, baseTextColor);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin:0;
+    @extend .primary-font-reg;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+	margin: 0;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    line-height: 24px;
+    color: map-get($theme, pColor);
+    @extend .primary-font-reg;
+}
+
+a, button {
+    @extend .primary-font-medium;
+}
+
+.title_primary--ctn {
+    align-self: center;
+    @extend .gbl-side-gutter;
+    margin-bottom: 5rem;
+}
+
+.title_primary {
+    @extend .primary-font-bold;
+    
+    font-size: 2.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: map-get($theme, 'titlePrimaryColor');
+    font-size: 30px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+$mainColor: rgba($almostBlack, 0.8);
+
+.title_primary--subtitle {
+    @extend .secondary-font;
+    text-align: center;
+    font-size: 18px;
+    white-space:nowrap;
+    color: $mainColor;
+}
+
+.title_primary--icon {
+    position: relative;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        height: 1px;
+        background-color: $mainColor;
+    }
+    
+    &:before {
+        left:0;
+        right: calc(50% + 15px);
+    }
+    
+    &:after {
+        right:0;
+        left: calc(50% + 15px);
+    }
+    
+    svg {
+        width: 18px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.icon-heart svg {
+    fill: $mainColor; 
+}
+
+.icon-code svg {
+    stroke: $mainColor;
+}
+
+
+.title--secondary {
+    margin-bottom: 2rem;
+    line-height: 3.2rem;
+    border-bottom: 1px solid;
+    padding-left: 1rem;
+    color: map-get($theme, 'titleSecondaryColor');
+    border-color: map-get($theme, titleSecondaryColorBorder); 
+    @extend .secondary-font;
+    font-size: 22px;
+}
+
+.clients--title {
+    margin-bottom: 2rem;
+    line-height: 3.2rem;
+    @extend .secondary-font;
+    font-size: 22px;
+}
+
+.header_title {
+    @extend .primary-font-bold;
+    text-transform: uppercase;
+}
+
+.header_subtitle {
+    @extend .primary-font-medium;
+}
+
+.nav-primary-name {
+   @extend .primary-font-medium;
+}
+
+.project--title {
+    @extend .primary-font-medium;
+}
+
+.awards_list--project {
+    @extend .primary-font-medium;
+}
+
+.presentations_list--date {
+    @extend .primary-font-medium;
+}
+
+
+.project--subtext {
+    @extend .secondary-font;
+    font-size: 1.6rem;
+}
+
+

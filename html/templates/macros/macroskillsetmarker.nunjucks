@@ -1,0 +1,7 @@
+{% macro skillsetCount(counter=3) %}
+   <ul class="skill_marker">
+        <li class="skill_marker--item {%if counter >= 1 %} check {% endif %}"></li>
+        <li class="skill_marker--item {%if counter >= 2 %} check {% endif %}"></li>
+        <li class="skill_marker--item {%if counter >= 3 %} check {% endif %}"></li>
+    </ul>
+{% endmacro %}

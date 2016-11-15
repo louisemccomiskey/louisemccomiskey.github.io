@@ -1,0 +1,162 @@
+// Gray colors
+$color-map-gray: (
+    1000: hsl(0, 0%, 20%),   // #333333
+    2000: hsl(0, 0%, 34.1%), // #575757
+    3000: hsl(0, 0%, 50.2%), // #808080
+    4000: hsl(0, 0%, 70.2%), // #b3b3b3
+    5000: hsl(0, 0%, 76.9%), // #c4c4c4
+    6000: hsl(0, 0%, 91%)    // #e8e8e8
+);
+
+$color: (
+    'navy': #162039
+);
+
+$navy:  #162039;
+$white: #f8f8f8;
+$cream: #F7EDE2;
+$pink:  #ed98b5;
+$lemon: #fbe68d;
+$mint:  #9ce5da;
+$mintDark: #74dacb;
+$charcoal: #171d22;
+    
+$blue: #27b3fe;
+$lilac: #af95ff;
+//$almostBlack: #2b2b2b;
+$almostBlack: #232323;
+$cloudyGray: #d8d8d8;
+$bluegray: #b4c5cf;
+
+$apricotPeach: #facac0;
+$linen: #f8f7f7;
+$caramel: #ffd5ae;
+$salmon: #ff787b;
+
+$turquiose: #48d1cc;
+$blue: #5dcfd9;
+
+$themeApricot:(
+    'baseBg': $linen,
+    'baseTextColor'         : $almostBlack,
+    'pColor'                : inherit,
+    'titlePrimaryColor'     : inherit,
+    
+    'titleSecondaryColor': $almostBlack,
+    'titleSecondaryColorBorder': rgba($almostBlack, 0.1),
+    
+    'headerBg': $turquiose,
+    'headerElements': $almostBlack,
+    'headerSocialIconFill':$almostBlack,
+    'headerSocialIconFillHover':$linen,
+    'headerSocialIconBorders':$almostBlack,
+    
+    'hyperlinkColor': $almostBlack,
+    'hyperlinkColorHover': $linen,
+    
+    'navBgColor': $linen,
+    'navLinkColor': $almostBlack,
+    'navLinkColorHover': $turquiose,
+    'navLinkColorActive': $turquiose,
+    'nameColor': $almostBlack,
+    
+    'navLinkColorInverse': $almostBlack,
+    'navLinkColorHoverInverse': $linen,
+    'navLinkColorActiveInverse': $linen,
+    
+    'btnPrimaryBg': $almostBlack,
+    'btnPrimaryColor': $linen,
+    'btnPrimaryBgHover' : $turquiose,
+    'btnPrimaryColorHover' : $almostBlack,
+    
+    'btnPrimaryBgInverse': $almostBlack,
+    'btnPrimaryColorInverse': $linen,
+    'btnPrimaryBgHoverInverse' : $turquiose,
+    'btnPrimaryColorHoverInverse' : $almostBlack,
+    
+    'btnPrimaryBgFooter': $turquiose,
+    'btnPrimaryColorFooter': $linen,
+    'btnPrimaryBgHoverFooter' : $linen,
+    'btnPrimaryColorHoverFooter' : $almostBlack,
+    
+    'btnIconBgHoverHeader': $linen,
+    'btnIconArrowHoverHeader': $turquiose,
+    
+    'btnPrimaryBgHeader': $turquiose,
+    'btnPrimaryColorHeader': $linen,
+    'btnPrimaryBgHoverHeader' : $almostBlack,
+    'btnPrimaryColorHoverHeader' : $linen,
+    
+    'btnIconBg': $almostBlack,
+    'btnIconArrow': $linen,
+    'btnIconBgHover': $turquiose,
+    'btnIconArrowHover': $linen,
+    
+    'btnIconBgInverse': $linen,
+    'btnIconArrowInverse': $almostBlack,
+    'btnIconBgHoverInverse': $turquiose,
+    'btnIconArrowHoverInverse': $linen,
+    
+    'carouselPaginationBg': $almostBlack,
+    'carouselPaginationBgActive': $turquiose,
+    'carouselPaginationBgHover': $turquiose,
+    
+    'clientsBg': $linen,
+    'clientFillColor': rgba($almostBlack,0.5),
+    
+    'skillMarkerDefault': rgba($turquiose,0.25),
+    'skillMarkerHighlighted': $turquiose,
+    'skillsBullet': $turquiose,
+    
+    'awardsLinkColor': $turquiose,
+    'awardsLinkHighlightColor': $blue,
+    'awardsTitleColor': $almostBlack,
+    
+    'presentationsDateColor': $turquiose,
+    
+    'projectsBg': #d4f4f3,
+    'projectBg1': #d4f4f3,
+    'projectBg2': $linen,
+    'projectBg3': #d4f4f3,
+    
+    'projectLogoColor': $almostBlack,
+    'projectLogoColorInverse': $turquiose,
+    
+    'footerBg': $almostBlack,
+    'footerElements': $linen,
+    'footerSocialIconFill':$linen,
+    'footerSocialIconFillHover':$turquiose,
+    'footerSocialIconBorders':$linen,
+);
+
+$theme: $themeApricot;
+
+$curvePrimary: cubic-bezier(.25,.8,.25,1);
+
+$btnIconSizeMap:(
+    'default': 40px,
+    'carousel': 50px
+);
+
+
+
+$breakpoints: (
+  'xs':  ( max-width:  359px ),
+  's': ( min-width:  360px ),
+  's-m': ( min-width:  640px ),
+  'm':  ( min-width:  767px ),
+  'l':  ( min-width:  1024px ),
+  'xl':  ( min-width:  1200px ),
+    
+  'nav-up':  ( min-width:  450px ),
+  'nav-btn-visible': ( min-width:  700px )
+) !default;
+
+
+$journey-line: rgba(black, 0.25);
+
+$sideGutterMmap: (
+    xs: 1.5rem,
+    s: 2.2rem,
+    m: 3rem
+);
