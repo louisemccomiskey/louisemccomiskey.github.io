@@ -1,8 +1,8 @@
 # Louise McComiskey
 
-## Small static portolio of some of my work and experience.
+Small static portolio of some of my work and experience.
 
-## This repo is based of of +rehabstudio's Fe-skeleton repository which can be found here: https://github.com/rehabstudio/fe-skeleton
+This repo is based of of +rehabstudio's Fe-skeleton repository which can be found here: https://github.com/rehabstudio/fe-skeleton
 
 
 
